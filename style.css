@@ -7,11 +7,17 @@
     box-sizing: border-box;
 }
 
+.nav-logo {
+    height: 100%;
+}
+
 .nav-menu {
+    position: fixed;
     width: 100%;
-    height: 100px;
+    height: 12vh;
     background-color: #121212; 
     padding: 20px;
+    z-index: 20;
 }
 
 .nav-item {
@@ -40,13 +46,18 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    translate: -50% -50%
+    translate: -50% -50%;
+    z-index:10;
+    width: 80%;
 }
 
 .main-content-text {
+    display: block;
     font-size: 60px;
     color: white;
     text-shadow: 10px 10px 0px #e06161;
+    width: 100%;
+    text-align: center;
 }
 
 .main-content-button {
@@ -55,5 +66,169 @@
     text-decoration:none;
     color: black;
     font-size:17px;
-    width: 300px;
+    width: 30%;
+    height: 60px;
+    border-radius: 50px;
+    box-shadow: 10px 10px 0 #e06161;
+    text-align: center;
+    line-height: 60px;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.main-background {
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100vh;
+    overflow:hidden;
+}
+
+.circle1 {
+    position: absolute;
+    top: -100px;
+    left: -50px;
+    width: 20%;
+    animation-name: rotate-move;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+.circle2 {
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    width: 25%;
+    animation-name: move-left-down;
+    animation-duration: 10s;
+    animation-iteration-count:infinite;
+}
+
+.circle3 {
+    position:absolute;
+    bottom:-30px;
+    left: -50px;
+    width: 30%;
+    animation-name: move-up-left;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+
+.circle-bordered {
+    position: absolute;
+    bottom: -30px;
+    left: 250px;
+    width: 10%;
+    animation-name: move-right;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+
+}
+
+.circle-dashed-border {
+    position: absolute;
+    bottom: -180px;
+    right: -100px;
+    width: 30%;
+    animation-name: rotation;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+
+}
+
+.triangle {
+    position: absolute;
+    top: 20%;
+    left:40%;
+    width: 5%;
+    animation-name: move-right;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+
+}
+
+.octagon {
+    position: absolute;
+    top: 65%;
+    left:50%;
+    width: 14%;
+    animation-name: rotate-move;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes move-up-left {
+    0% {
+        translate:0 0;
+    }
+    50% {
+        translate:40px 80px;
+    }
+    100% {
+        translate:0 0; 
+    }
+}
+
+@keyframes rotation {
+    0% {
+        rotate:0deg;
+    }
+
+    50% {
+        rotate:359deg;
+    }
+
+    100% {
+        rotate:0deg;
+    }
+}
+
+@keyframes move-right {
+    0% {
+        translate: 0 0;
+    }
+
+    50% {
+        translate: 230% 0;
+    }
+
+    100% {
+        translate: 0 0;
+    }
+}
+
+
+@keyframes rotate-move { 
+    0% {
+        translate: 0 0;
+        rotate: 0deg;
+    }
+
+    50% {
+        translate: 80px 200px ;
+        rotate: 180deg ;
+    }
+
+    100% {
+        translate: 0 0;
+        rotate: 359deg ;
+    }
+}
+
+@keyframes move-left-down {
+    0% {
+        translate: 0 0;
+        rotate: 0deg;
+    }
+
+    50% {
+        translate: -180px 200px;
+        rotate: 180deg;
+    }
+
+    100% {
+        translate: 0 0;
+        rotate: 359deg;
+    }
 }
