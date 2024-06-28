@@ -365,6 +365,8 @@ hr {
     padding: 15px 25px;
     margin:30px auto ;
     box-shadow: 10px 10px 0 #e06161;
+    z-index: 2;
+    background-color: white;
 }
 
 .advantages-content {
@@ -393,7 +395,18 @@ hr {
     top: 0;
     left: 0;
     z-index: 1;
+}
 
+.adv-hexagon {
+    z-index: 0;
+    position: sticky;
+    top:40%;
+}
+
+.adv-circle {
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
 
 .our-works-main {
@@ -411,14 +424,14 @@ hr {
 }
 
 .contacts-background {
-    background: linear-gradient( #E59385  100%, #FDC496 100%,#ffffff 100%); 
+    padding: 80px;
+    background: linear-gradient( #DD8380 100%, #E09B83 20%,#ffffff 10%); 
 
     }
 
 .contacts-title {
     text-align: center;
-    height: 350px;
-    padding: 100px;
+   padding: 30px;
     font-size: 40px;
 }
 
